@@ -1,12 +1,11 @@
 - var scripts = getBlock('scripts')
 - var styles = getBlock('styles')
 
-//- Prettify Syntax Highlighting
-- scripts.add(["/vendor/prettify.js"])
-- styles.add(["/vendor/prettify.css"])
-
 //- jQuery
 - scripts.add(["/vendor/jquery/jquery.js"])
+
+//- Highlight.js
+- styles.add(["http://yandex.st/highlightjs/8.0/styles/github.min.css"])
 
 //- Bootstrap
 - scripts.add(["/vendor/components-bootstrap/js/bootstrap.js"])
@@ -79,3 +78,9 @@ html(lang="en")
 
     // Scripts
     != scripts.toHTML()
+
+
+    // Highlight.js loading
+    script(src="http://yandex.st/highlightjs/8.0/highlight.min.js")
+    script.
+      hljs.initHighlightingOnLoad();
